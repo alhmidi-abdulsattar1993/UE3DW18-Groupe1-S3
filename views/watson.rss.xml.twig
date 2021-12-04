@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>watson</title>
+        <description>Ceci est un exemple de flux RSS 2.0</description>
+        <link>{{ path('home') }}</link>
+        {% for link in links %}
+        <item>
+            <title>{{ link.title }}</title>
+            <description>{{ link.desc }}</description>
+            <link> {{ path('link', { 'id': link.id }) }}</link>
+            <user>{{ link.user.username }}</user>
+            {% for tag in link.tags %} >
+            <tags>{{ tag.title }}</tags>
+            <tags_url>{{ path('tag', { 'id': tag.id }) }}</tags_url>
+            {% endfor %}
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
