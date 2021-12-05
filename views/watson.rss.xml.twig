@@ -10,7 +10,7 @@
             <description>{{ link.desc }}</description>
             <link> {{ path('link', { 'id': link.id }) }}</link>
             <user>{{ link.user.username }}</user>
-            {% for tag in link.tags %} >
+            {% for tag in link.tags %} 
             <tags>{{ tag.title }}</tags>
             <tags_url>{{ path('tag', { 'id': tag.id }) }}</tags_url>
             {% endfor %}
