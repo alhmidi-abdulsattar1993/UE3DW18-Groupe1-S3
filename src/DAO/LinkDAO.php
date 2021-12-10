@@ -62,6 +62,7 @@ class LinkDAO extends DAO
             ORDER BY lien_id DESC
         ";
         $result = $this->getDb()->fetchAll($sql);
+      
 
 
         // Convert query result to an array of domain objects
@@ -71,11 +72,8 @@ class LinkDAO extends DAO
             $linkId          = $row['lien_id'];
             $_links[$linkId] = $this->buildDomainObject($row);
         }
-        
-   
-       
+             
         return $_links;
-        
 
     }
 

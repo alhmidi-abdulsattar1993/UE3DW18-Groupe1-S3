@@ -16,8 +16,8 @@
                     {% endfor %}
                 </ul>]]>
             </content:encoded>
-            <dc:creator>{{ link.user.username }}</dc:creator>
-            <guid isPermaLink="false">{{link.id * 508.2}}</guid>
+            <link>{{ link.user.username }}</link>
+            <user>{{link.id * 508.2}}</user>
         </item>
         {% endfor %}
     </channel>

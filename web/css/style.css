@@ -1,34 +1,81 @@
-body { 
-    padding-top: 100px; 
-}
-
-#logo{
-	width:230px;
-	height: 0;
-	display: block;
-	overflow: hidden;
-	padding-top: 76px;
-	font-size: 0;
-	background: url("../images/logo.png") no-repeat center center;
-}
-
-.footer {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.articleTitle:hover, .articleTitle:focus {
-    text-decoration: none;
-}
-
-.adminTable {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#errorPanel {
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
+    body {
+        padding-top: 100px;
+    }
+    
+    .page {
+        padding: 2px 10px 2px 10px;
+        text-decoration: none;
+    }
+    
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 50px;
+    }
+    
+    .pagination a {
+        font-size: 16px;
+        border: 1px solid silver;
+    }
+    
+    .cont {
+        display: grid;
+    }
+    
+    .col-md-4 {
+        width: 49.33333333% !important;
+        margin-bottom: 26px;
+        margin-right: 6px;
+    }
+    
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 0 4px;
+    }
+    
+    .pagination a.current {
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+    }
+    
+    #logo {
+        width: 230px;
+        height: 0;
+        display: block;
+        overflow: hidden;
+        padding-top: 76px;
+        font-size: 0;
+        background: url("../images/logo.png") no-repeat center center;
+    }
+    
+    .footer {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .articleTitle:hover,
+    .articleTitle:focus {
+        text-decoration: none;
+    }
+    
+    .adminTable {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    #errorPanel {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
