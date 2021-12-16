@@ -1,19 +1,33 @@
-{% extends "layout.html.twig" %} {% block title %}Home{% endblock %} {% block content %}
-<div class="row">
-    <div class="cont">
-        <div class="container_page">
-            {% for link in links %}
-            <div class="col-md-4 single-item">
-                <h2><a class="linkTitle" href="{{ path('link', { 'id': link.id }) }}">{{ link.title }}</a></h2>
-                <p>{{ link.desc }}</p>
-                <a href="{{ link.url }}" title="" target="_blank">Open ></a>
-                <em>(by {{ link.user.username }})</em> {% for tag in link.tags %}
-                <a href="{{ path('tag', { 'id': tag.id }) }}" title="Filtrer">
+{% extends "layout.html.twig" %} {% block title %}Home{% endblock %}{% block landing %}
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-subheading">Welcome To Our Studio!</div>
+        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+    </div>
+</header>
+{% endblock %} {% block content %}
+<section class="page-section" id="services">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Services</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    </div>
+    <div class="row">
+        <div class="cont">
+            <div class="container_page">
+                {% for link in links %}
+                <div class="col-md-4 single-item">
+                    <h2><a class="linkTitle" href="{{ path('link', { 'id': link.id }) }}">{{ link.title }}</a></h2>
+                    <p>{{ link.desc }}</p>
+                    <a href="{{ link.url }}" title="" target="_blank">Open ></a>
+                    <em>(by {{ link.user.username }})</em> {% for tag in link.tags %}
+                    <a href="{{ path('tag', { 'id': tag.id }) }}" title="Filtrer">
 			    		{{ tag.title }}
 			    	</a> {% endfor %}
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
+</section>
 {% endblock %}

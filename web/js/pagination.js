@@ -115,4 +115,4 @@
     };
 })(jQuery);
 
-$(".container_page").pagify(6, ".single-item");
+$(".container_page").pagify(2, ".single-item");
